@@ -1,0 +1,114 @@
+MSC Nastran V2024.2 (AMD Windows 10 Enterprise  6.2 9200) Control File: 
+----------------------------------------------------------------- 
+$ sysfield=SCR*(RAW=YES,BUFFIO=YES,wnum=16,wsize=16mb) $(c:/program files/msc.software/msc_nastran/2024.2/conf/nast20242.rcf[2])
+$ sysfield=DBALL(RAW=YES,BUFFIO=YES,wnum=16,wsize=16mb) $(c:/program files/msc.software/msc_nastran/2024.2/conf/nast20242.rcf[3])
+Nastran BUFFSIZE=65537 $(c:/program files/msc.software/msc_nastran/2024.2/conf/nast20242.rcf[6])
+JID='C:\Users\Murat\Desktop\opt_project\Sampling\generated_inputs\Case_20\20_m0.150.dat'
+OUT='./20_m0.150'
+MEM=7812MB      $ 
+PMEM=0+
+MACH='AMD'
+OPER='Windows 10 Enterprise '
+OSV='6.2 9200'
+MODEL='AMD Ryzen 7 8840HS w/ Radeon 7 (DESKTOP-GRUV8A1)'
+NPROC='16'
+CONFIG=15
+NPROC=16
+symbol=DELDIR='c:/program files/msc.software/msc_nastran/2024.2/msc20242/nast/del' $(program default)
+symbol=DEMODIR='c:/program files/msc.software/msc_nastran/2024.2/msc20242/nast/demo' $(program default)
+symbol=LM_NO_SNMP=1 $(c:/program files/msc.software/msc_nastran/2024.2/conf/nast20242.rcf[10])
+symbol=MKL_INTERFACE_LAYER=ILP64 $(c:/program files/msc.software/msc_nastran/2024.2/conf/nast20242.rcf[1])
+symbol=SSSALTERDIR='c:/program files/msc.software/msc_nastran/2024.2/msc20242/nast/sssalter' $(program default)
+symbol=TPLDIR='c:/program files/msc.software/msc_nastran/2024.2/msc20242/nast/tpl' $(program default)
+SDIR='c:/scratch/20_m0.150.T23172_15'
+DBS='c:/scratch/20_m0.150.T23172_15'
+SCR='yes'
+SMEM=100
+BPOOL=1953.0MB
+DMPMEM=estimate
+NEWDEL='c:/program files/msc.software/msc_nastran/2024.2/msc20242/win64i8/sss'
+DEL='MSCDEF'
+SPOTWELD=''
+EMENGPU=''
+UDR=''
+DML=MSCDEF
+SDL=MSCDEF
+AUTH='27500@lisanslar.cc.itu.edu.tr'
+AUTHQUE=20
+MSGCAT='c:/program files/msc.software/msc_nastran/2024.2/msc20242/win64i8/analysis.msg'
+MSGDEST='f06'
+NEWS='c:/program files/msc.software/msc_nastran/2024.2/msc20242/nast/news.txt'
+----------------------------------------------------------------- 
+MSC_ISHELLPATH=C:\Program Files\MSC.Software\MSC_Nastran\2024.2\msc20242\actran\win64\Actran_2024.2\bin;C:\Program Files\MSC.Software\MSC_Nastran\2024.2\msc20242\nast; 
+MSC_JIDPATH= 
+PATH=c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8;c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\nvidia;c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\intel\bin64;c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\lib;c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8;C:\Users\Murat\anaconda3;C:\Users\Murat\anaconda3\Library\mingw-w64\bin;C:\Users\Murat\anaconda3\Library\usr\bin;C:\Users\Murat\anaconda3\Library\bin;C:\Users\Murat\anaconda3\Scripts;C:\Users\Murat\anaconda3\bin;C:\Users\Murat\anaconda3\condabin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\MATLAB\R2024b\bin;C:\Users\Murat\AppData\Local\Microsoft\WindowsApps;C:\Users\Murat\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2024b\bin;C:\Users\Murat\AppData\Local\Microsoft\WindowsApps;C:\Users\Murat\AppData\Local\Programs\Microsoft VS Code\bin 
+SCA_SERVICE_CATALOG=c:\program files\msc.software\msc_nastran\2024.2\msc20242\res\SCAServiceCatalog.xml 
+SCA_RESOURCE_DIR=c:\program files\msc.software\msc_nastran\2024.2\msc20242\res 
+Cmd Line:    C:\Program Files\MSC.Software\MSC_Nastran\2024.2\msc20242\win64i8\nastran.exe 20_M0.150.dat 
+Current Dir: C:\Users\Murat\Desktop\opt_project\Sampling\generated_inputs\Case_20 
+Time Cmd:    c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\msctime 
+Executable:  c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\analysis.exe 
+Arch= Kywd:  [Not specified]  
+MSC_MSG:     stderr  
+FPE:         yes  
+----------------------------------------------------------------- 
+Current resource limits:
+ Physical memory:                    15624 MB
+ Physical memory available:           4666 MB
+ Paging file size:                   62728 MB
+ Paging file size available:         43060 MB
+ Virtual memory:                 134217727 MB
+ Virtual memory available:       134213506 MB
+----------------------------------------------------------------- 
+System configuration:
+ Hostname:         DESKTOP-GRUV8A1.itu.edu.tr
+ Architecture:     win64i8
+ Platform:         AMD Windows 10 Enterprise  6.2 9200 (Windows Compute Cluster)
+ Model:            AMD Ryzen 7 8840HS w/ Radeon 7
+ Clock freq.:      34584 MHz
+ Number of CPUs:   16
+ Number of CPUs:   0 ( limited by PBS )
+ Executable:       standard
+ Raw model ID:     15
+ Config number:    15
+ Physical memory:  15624 MB
+ Virtual memory:   62728 MB
+ Numeric format:   64-bit little-endian IEEE.
+ Bytes per word:   8
+ Disk block size:  512 bytes (64 words)
+ Remote shell cmd: "c:/program files/msc.software/msc_nastran/2024.2/msc20242/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
+                   <ccs_cmd> (Windows CCS nodes)
+----------------------------------------------------------------- 
+MSC Nastran started  Sun Jun 15 16:02:21 TSS 2025 
+ 16:02:23  Beginning Analysis
+SCA Kernel 30.0.943723 successfully initialized
+BLAS/LAPACK .dll "c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\libimalloc.dll" has been loaded.
+BLAS/LAPACK .dll "c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\mkl_core.2.dll" has been loaded.
+BLAS/LAPACK .dll "c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\mkl_intel_thread.2.dll" has been loaded.
+BLAS/LAPACK .dll "c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\mkl_rt.2.dll" has been loaded.
+BLAS/LAPACK .dll "c:\program files\msc.software\msc_nastran\2024.2\msc20242\win64i8\MSCblas.dll" has been loaded.
+
+ 16:02:26  MSC Authorization Information - System Attributes (1004, 0)
+ 16:02:26  -----------------------------------------------------------
+  Date:          Sun Jun 15 16:02:26 2025
+  MSC Id:        72089441c8cf (ethernet) (Intel)
+  Hostname:      DESKTOP-GRUV8A1 (user Murat, display DESKTOP-GRUV8A1)
+  License files: 27500@lisanslar.cc.itu.edu.tr
+  CEID:          568BB99A-A561F7A5
+  User:          Murat
+  Display:       DESKTOP-GRUV8A1
+  LAPI Version:  LAPI 22.4.0 (CL df5c63aa) (FLEXlm 11.16.3.0)
+
+  * * * * * * * * * * * * * * * * * * * *
+  * * * * * * * * * * * * * * * * * * * *
+  * *                                 * *
+  * *   MSC Customer Entitlement ID   * *
+  * *        568BB99A-A561F7A5        * *
+  * *                                 * *
+  * * * * * * * * * * * * * * * * * * * *
+  * * * * * * * * * * * * * * * * * * * *
+
+ 16:02:27  MSC Authorization Information - Checkout Successful (1016, 0)
+ 16:02:27  -------------------------------------------------------------
+ 16:02:27  Acquired 13 licenses for Group MSCONE (MSC Nastran) from license server on host lisanslar.cc.itu.edu.tr
+

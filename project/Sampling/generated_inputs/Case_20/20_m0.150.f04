@@ -1,0 +1,26 @@
+1
+ MACHINE                          MODEL                 OPERATING SYSTEM       MSC Nastran       BUILD DATE         RUN DATE
+ AMD                              AMD Ryzen 7 8840HS w  Windows 10 Enterprise      i8 V2024.2    NOV 21, 2024       JUN 15, 2025
+
+ 
+                               ===    M S C   N a s t r a n           E X E C U T I O N   S U M M A R Y    ===
+
+ Day_Time  Elapsed     I/O_Mb      Del_Mb     CPU_Sec    Del_CPU    Subroutine
+ 
+ 16:02:27     0:00        0.0         0.0        -0.0       -0.0    SEMTRN   BGN
+ 16:02:27     0:00        0.0         0.0        -0.0        0.0    SEMTRN   END
+ 16:02:27     0:00        0.0         0.0        -0.0        0.0    DBINIT   BGN
+      ** CURRENT PROJECT ID = ' "BLANK" '  ** CURRENT VERSION ID =          1
+
+     S U M M A R Y   O F   F I L E   A S S I G N M E N T   F O R   T H E   P R I M A R Y   D A T A B A S E     ( DBSNO   1, V2024.2 )
+
+    ASSIGNED PHYSICAL FILE NAME (/ORIGINAL)      LOGICAL NAME     DBSET        STATUS    BUFFSIZE     CLUSTER SIZE      TIME STAMP
+    ---------------------------------------      ------------     -----        ------    --------     ------------     ------------
+    c:/scratch/20_m0.150.T23172_15.MASTER        MASTER           MASTER       NEW          65537           1          250615160227
+    c:/scratch/20_m0.150.T23172_15.DBALL         DBALL            DBALL        NEW          65537           1          250615160228
+    c:/scratch/20_m0.150.T23172_15.OBJSCR        OBJSCR           OBJSCR       NEW           8193           1          250615160229
+               **** MEM FILE ****                * N/A *          SCRATCH 
+    c:/scratch/20_m0.150.T23172_15.SCRATCH       SCRATCH          SCRATCH      NEW          65537           1          250615160230
+    c:/scratch/20_m0.150.T23172_15.SCR300        SCR300           SCRATCH      NEW          65537           1          250615160231
+ 16:02:27     0:00        9.0         9.0         0.0        0.0    DBINIT   END
+ 16:02:27     0:00        9.0         0.0         0.0        0.0    XCSA     BGN

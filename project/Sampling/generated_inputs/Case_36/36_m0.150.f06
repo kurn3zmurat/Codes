@@ -1,0 +1,308 @@
+1
+ 
+ 
+ 
+ 
+                      Warning: This computer program is protected by copyright law and international treaties.       
+                  Unauthorized use, reproduction or distribution of this computer program, or any portion of it, may 
+                                          result in severe civil and criminal penalties.                             
+                         Copyright (C) 2024 Hexagon AB and/or its subsidiaries. All rights reserved.                 
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           Hexagon AB            * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *      M S C   N a s t r a n      * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *     Version 2024.2-af13cbfd     * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          NOV 21, 2024           * *
+                                              * *                                 * *
+                                              * *               AMD               * *
+                                              * *MODEL AMD Ryzen 7 8840HS w/ Rade * *
+                                              * * Windows 10 Enterprise 6.2 9200  * *
+                                              * *        Compiled for 8664        * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+1News file
+  
+               Welcome to MSC Nastran 2024.2
+  
+   MSC Nastran brings powerful new features and enhancements for engineering
+   solutions in several releases through the year. Key enhancements in
+   Version 2024.2 are summarized below. Addtional details can be found in
+   the MSC Nastran Version 2024.2 Release Guide.
+  
+     MSC Nastran 2024.2 Features and Enhancements
+  
+     High Performance Computing (HPC) for NVH
+     - Improved performance for ACMS, especially for large solid models
+     - Improved performance for FASTFR, particularly when structural
+       damping is present
+     - General performance improvement for high frequency acoustics
+     - Improved diagnostics for linear solution available in LOG file
+       Information includes solver selection and memory use
+  
+     Topology Optimization
+     - SOL 200 NEO Topology Optimization for generative design with support for
+       manufacturing constraints. Optimized CAD geometry and mesh output for
+       every design cycle.
+  
+     High Performance SOL 400 (NLPERF)
+     - Support Lagrange Multiplier for MPC and Rigid Elements
+     - Controls distributed surface load computation for shell elements with
+       offsets and the use of an additional enhancement for computing the
+       average nodal normal vector
+     - GPFORCE and ESE can be requested in ANALYSIS=NLSTAT
+     - OUTCTRL={STD,SOLUTION,INTERM} keyword in NLOPRM case control statement is
+       available
+  
+     Linear
+     - Global-Local analysis in SOL 101 and 103. Creates a local model based on
+       a user-provided definition (CARVE) and replaces the rest of the model
+       with an external superelement. Allows for detailed local studies without
+       having to solve the entire model every time.
+     - Multiple Output requests of the same result item in linear solutions
+       (SOL 101, 103, 108, 109, 111, 112) through the use of repeated output
+       request subcase, REPCASE.
+  
+     NVH (Vibroacoustics)
+     Automated skinning of solid elements free surfaces
+     - Identify residual structure solid elements' exposed surfaces, and create
+       required triangular or quadilateral shell elements on top of it
+     - Stress and strain data recovery available for skinned shell elements
+     - Supported in Linear solution sequences
+     Acoustic Fluid Grid Participation Factors from fluid skin grids in touch
+       with either structure wetted surface or trim components
+     Mass matrix support in Cohesive elements
+     - supports mass matrix in cohesive elements for glue line modeling.
+     Improved solution time and reduced disk space for Nastran-PEM models
+  
+     Aeroelasticity
+     - Flutter Perturbation Step available in SOL 400 Nonlinear
+  
+     HDF5 hybrid precision output file
+     - Allows writing of 32-bit real and 64-bit integer data to H5 file
+     - Combines small size of 32-bit and high value domain ID of 64-bit
+  
+      Inertia Relief with External Superelements
+     - For external superelements, inertia relief is now supported for the
+       following three options: EXTSEOUT MATDB(MATRIXDB), EXTSEOUT DMIGDB, and
+       EXTSEOUT DMIGOP2 for INREL = -1 and INREL = -2.
+     - For the above three external superelement options, checks are now
+       performed internally to insure that the inertia relief specifications
+       between external superelement and the assembly run are consistent.
+     - When verifying results, the user is reminded that with inertia relief,
+       the displacements are relative displacements and may not in any way match
+       the results of say a model containing all the external superelements
+       processed as standard part superelements. However, element results
+       such as force or stress should match closely between the two types of runs
+       if consistently modeled.
+  
+  
+     Documentation
+     - The complete documentation set is provided in a separate installer and
+       when installed is available at: MSC_DOC_DIR/doc/pdf_nastran directory,
+       where MSC_DOC_DIR is the directory where documentation was installed.
+       This help set includes cross references between documents, and links to
+       how-to videos, and example files
+  
+     Individual MSC Nastran documents are available for download from the
+       Simcompanion Website at:
+       http://simcompanion.hexagon.com/
+  
+     The documentation set includes the following:
+  
+         1.  MSC Nastran 2024.2 Installation and Operations Guide
+         2.  MSC Nastran 2024.2 Quick Reference Guide
+         3.  MSC Nastran 2024.2 Release Guide
+         4.  MSC Nastran 2024.2 Linear Statics Analysis User's Guide
+         5.  MSC Nastran 2024.2 Dynamic Analysis User's Guide
+         6.  MSC Nastran 2024.2 Superelements User's Guide
+         7.  MSC Nastran 2024.2 Rotordynamics User's Guide
+         8.  MSC Nastran 2024.2 Demonstration Problems Manual
+         9.  MSC Nastran 2024.2 Nastran Embedded Fatigue User's Guide
+        10.  MSC Nastran 2024.2 Design Sensitivity and Optimization
+        11.  MSC Nastran 2024.2 Nonlinear User's Guide SOL 400
+        12.  MSC Nastran 2024.2 DMAP Programmer's Guide
+        13.  MSC Nastran 2024.2 High Performance Computing User's Guide
+        14.  MSC Nastran 2024.2 New Verification Manual
+        15.  MSC Nastran 2024.2 DEMATD Guide
+        16.  MSC Nastran 2024.2 Explicit Nonlinear (SOL 700) User's Guide
+        17.  MSC Nastran 2024.2 ACMS User's Guide
+  
+   Please refer to  MSC_DOC_DIR/doc/pdf_nastran/nastran_library.pdf
+   for the complete document set:
+  
+  
+   Additional information about the release can be found at the MSC Nastran
+   Product Support page: http://simcompanion.hexagon.com
+  
+   The support page provides links to these valuable information:
+      * A searchable Knowledge Base containing examples and answers to thousands
+        of frequently asked questions written by MSC Software subject-matter
+        experts.
+      * Peer-to-peer Discussion Forums enabling you to post questions for your
+        MSC Software products and receive answers from other users worldwide.
+      * A list of known issues with the product and any workarounds.
+      * Instructions on how to contact technical support
+      * A mechanism for sending us product feedback or enhancement requests.
+      * Hardware and software requirements.
+      * Examples and Tutorials
+      * and much more.
+  
+   For information on training, please visit our Training web site
+  
+      https://hexagon.com/support-success/manufacturing-intelligence/
+      design-engineering-support/training-materials
+  
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     $ SYSFIELD=SCR*(RAW=YES,BUFFIO=YES,WNUM=16,WSIZE=16MB) $(C:/PROGRAM FILES/MSC.SO
+     $ SYSFIELD=DBALL(RAW=YES,BUFFIO=YES,WNUM=16,WSIZE=16MB) $(C:/PROGRAM FILES/MSC.S
+     NASTRAN BUFFSIZE=65537 $(C:/PROGRAM FILES/MSC.SOFTWARE/MSC_NASTRAN/2024.2/CONF/N
+     NASTRAN NLINES=999999                                                           
+     $                                                                               
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     SOL 145                                                                                 
+     CEND                                                                                    
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     3
+                                                                                                                                    
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1      ECHO = NONE                                                                             
+                  2      $                                                                                       
+                  3      AUTOSPC = YES                                                                           
+                  4      METHOD = 1000                                                                           
+                  5      FMETHOD = 2000                                                                          
+                  6      SPC = 3000                                                                              
+                  7      BEGIN BULK                                                                              
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     4
+                                                                                                                                    
+0                                                                                                                                   
+                                              I N P U T   B U L K   D A T A   E C H O                                               
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+ *** USER INFORMATION MESSAGE 9991 (SDLWIF)
+     Messages are being generated at include level 0.
+     File: C:\Users\Murat\Desktop\opt_project\Sampling\generated_inputs\Case_36\36_m0.150.dat
+ *** USER WARNING MESSAGE 9994 (BULFUN)
+     MAT1 with MID=100003 near line 8212
+     User information:  Material has unreasonable or inconsistent values of E, G or NU.
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     5
+                                                                                                                                    
+0                                                                                                                                   
+                                        M O D E L   S U M M A R Y          BULK = 0
+                                   ENTRY NAME        NUMBER OF ENTRIES
+                                   ----------        -----------------
+                                         AERO                        1
+                                       CAERO1                        1
+                                        CBEAM                      987
+                                        CONM2                        2
+                                       CORD2R                        1
+                                       CQUAD4                     6794
+                                       CTRIA3                      168
+                                        EIGRL                        1
+                                       FLFACT                        3
+                                      FLUTTER                        1
+                                         GRID                     7007
+                                         MAT1                        5
+                                      MKAERO1                       13
+                                       PAERO1                        1
+                                        PARAM                        4
+                                        PBEAM                       24
+                                       PSHELL                        7
+                                         RBE2                      115
+                                         RBE3                       16
+                                         SET1                        1
+                                         SPC1                        1
+                                       SPCADD                        1
+                                      SPLINE2                        1
+
+ ^^^     
+ ^^^ >>> IFP OPERATIONS COMPLETE <<< 
+ ^^^     
+ *** USER FATAL MESSAGE 1250 (OPNPFL)
+     STATUS =           32, FILX =   40, LOGNAME = DBC     , NSBUF3 =     1024
+     FILE = ./36_m0.150.xdb
+ *** USER FATAL MESSAGE 1250 (OPNPFL)
+     ERROR MESSAGE IS --
+     Dosya baþka bir iþlem tarafýndan kullanýldýðýndan bu iþlem dosyaya eriþemiyor.
+ *** SYSTEM WARNING MESSAGE 6066 (DBC)
+ *** DBCMSG ERROR MESSAGE   34 FROM SUBROUTINE DBC
+     THE DBC MODULE HAS BEEN TERMINATED BECAUSE OF THE ABOVE FATAL DBC ERROR.
+     USER INFORMATION: SUBSEQUENT DBC CALLS WILL NOT BE EXECUTED, AND THE DATABASE CONVERSION IS INCOMPLETE.
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     6
+                                                                                                                                    
+0                                                                                                                                   
+                           O U T P U T   F R O M   G R I D   P O I N T   W E I G H T   G E N E R A T O R
+0                                                     REFERENCE POINT =        1
+                                                                M O
+                      *  3.423126E-01  1.403875E-21  7.829761E-20  1.912415E-20  7.802608E-05 -6.512717E-02 *
+                      *  1.403875E-21  3.423126E-01  5.770877E-24 -7.802608E-05  4.915747E-25 -1.843630E-02 *
+                      *  7.829761E-20  5.770877E-24  3.423126E-01  6.512717E-02  1.843630E-02 -1.912464E-20 *
+                      *  1.912415E-20 -7.802608E-05  6.512717E-02  2.354984E-02  3.470164E-03  4.047737E-06 *
+                      *  7.802608E-05  4.915747E-25  1.843630E-02  3.470164E-03  1.266887E-03 -1.349895E-05 *
+                      * -6.512717E-02 -1.843630E-02 -1.912464E-20  4.047737E-06 -1.349895E-05  2.481223E-02 *
+                                                                 S
+                                           *  1.000000E+00  0.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  1.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  0.000000E+00  1.000000E+00 *
+                               DIRECTION
+                          MASS AXIS SYSTEM (S)     MASS              X-C.G.        Y-C.G.        Z-C.G.
+                                  X            3.423126E-01      5.586748E-20  1.902564E-01  2.279381E-04
+                                  Y            3.423126E-01     -5.385809E-02  1.436040E-24  2.279381E-04
+                                  Z            3.423126E-01     -5.385809E-02  1.902564E-01 -5.586892E-20
+                                                                I(S)
+                                           *  1.115896E-02  3.746123E-05  1.545989E-07 *
+                                           *  3.746123E-05  2.739250E-04 -1.346008E-06 *
+                                           *  1.545989E-07 -1.346008E-06  1.142843E-02 *
+                                                                I(Q)
+                                           *  1.115908E-02                             *
+                                           *                2.737959E-04               *
+                                           *                              1.142843E-02 *
+                                                                 Q
+                                           *  9.999941E-01  3.441475E-03  4.151098E-07 *
+                                           * -3.441475E-03  9.999941E-01  1.206190E-04 *
+                                           *  0.000000E+00 -1.206197E-04  1.000000E+00 *
+
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     7
+                                                                                                                                    
+0                                                                                                                                   
+1                                                                              JUNE  15, 2025  MSC Nastran 11/21/24   PAGE     8
+                                                                                                                                    
+0                                                                                                                                   
+0 RESULTANTS ABOUT        1 IN SUPERELEMENT BASIC SYSTEM COORDINATES.
+
+0                                                  OLOAD    RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX    0.000000E+00     ----          ----          ----       0.000000E+00  0.000000E+00                             
+               FY       ----       0.000000E+00     ----       0.000000E+00     ----       0.000000E+00                             
+               FZ       ----          ----       0.000000E+00  0.000000E+00  0.000000E+00     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ *** USER INFORMATION MESSAGE 5010 (LNCILS)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = 3.576280D+04, CYCLES = 3.009788D+01 THE STURM COUNT = 2
